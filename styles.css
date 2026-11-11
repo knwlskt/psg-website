@@ -1,0 +1,152 @@
+/* Population Specialty Group — styles.css */
+:root {
+  --primary: #1f4e5f;
+  --primary-dark: #163a47;
+  --accent: #d98e04;
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --text: #222222;
+  --muted: #5b6770;
+  --border: #dde1e4;
+  --max: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a { color: var(--primary); }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- Header ---------- */
+.site-header { background: var(--primary); color: #fff; }
+
+.header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand { color: #fff; text-decoration: none; display: flex; flex-direction: column; margin-right: auto; }
+.brand-small { font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; }
+.brand-main { font-size: 1.35rem; font-weight: bold; }
+
+.menu-toggle {
+  display: none;
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer;
+}
+
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.25rem; }
+.main-nav a {
+  display: block; color: #fff; text-decoration: none;
+  padding: 0.5rem 0.8rem; border-radius: 4px;
+  font-family: system-ui, sans-serif;
+}
+.main-nav a:hover, .main-nav a.active { background: var(--primary-dark); }
+
+.has-dropdown { position: relative; }
+.dropdown {
+  display: none !important;
+  position: absolute; top: 100%; left: 0;
+  flex-direction: column;
+  background: var(--primary-dark);
+  min-width: 160px; border-radius: 4px; z-index: 10;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown { display: flex !important; }
+
+.search-form { display: flex; }
+.search-form input {
+  padding: 0.45rem 0.6rem; border: none;
+  border-radius: 4px 0 0 4px; min-width: 180px; font-size: 0.95rem;
+}
+.search-form button {
+  padding: 0.45rem 0.8rem; border: none; cursor: pointer;
+  background: var(--accent); color: #fff; border-radius: 0 4px 4px 0;
+}
+
+/* ---------- Main content ---------- */
+main { max-width: var(--max); margin: 0 auto; padding: 2rem 1rem 3rem; }
+
+h1, h2 { color: var(--primary); line-height: 1.25; }
+
+.hero {
+  background: var(--surface); border-left: 5px solid var(--accent);
+  padding: 1.5rem 2rem; margin-bottom: 2rem;
+}
+.lead { font-size: 1.15rem; }
+
+.card-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 1.5rem 0 2rem;
+}
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1.25rem;
+  text-decoration: none; color: var(--text);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.card h2 { margin-top: 0; font-size: 1.2rem; }
+
+.breadcrumb { font-size: 0.9rem; color: var(--muted); margin: 0; }
+
+.board-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.person {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1rem 1.25rem;
+}
+.person h2 { margin: 0 0 0.25rem; font-size: 1.15rem; }
+.person p { margin: 0.15rem 0; }
+.person .role { color: var(--accent); font-weight: bold; }
+
+.bylaw { border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+.bylaw h2 { font-size: 1.15rem; }
+
+.newsletter-list li, .announcements li { margin-bottom: 0.4rem; }
+
+.results-list { list-style: none; padding: 0; }
+.results-list li {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1rem; margin-bottom: 0.75rem;
+}
+.results-list p { margin: 0.4rem 0 0; color: var(--muted); }
+mark { background: #ffe58a; padding: 0 2px; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center; padding: 1.5rem 1rem;
+  background: var(--primary-dark); color: #fff; font-size: 0.9rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
+  .main-nav { display: none; width: 100%; }
+  .main-nav.open { display: block; }
+  .main-nav ul { flex-direction: column; }
+  .dropdown { display: flex !important; position: static; background: transparent; padding-left: 1rem; }
+  .search-form { width: 100%; }
+  .search-form input { flex: 1; min-width: 0; }
+  .hero { padding: 1.25rem; }
+}

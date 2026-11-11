@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Population Specialty Group | AAG</title>
+  <meta name="description" content="The AAG Population Specialty Group promotes research, teaching, and service in population geography.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER & NAVIGATION ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="brand">
+        <span class="brand-small">American Association of Geographers</span>
+        <span class="brand-main">Population Specialty Group</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="#home" data-nav="home">Home</a></li>
+          <li class="has-dropdown">
+            <a href="#about" data-nav="about" aria-haspopup="true">About</a>
+            <ul class="dropdown">
+              <li><a href="#about/board" data-nav="about/board">Board</a></li>
+              <li><a href="#about/bylaws" data-nav="about/bylaws">Bylaws</a></li>
+            </ul>
+          </li>
+          <li><a href="#newsletters" data-nav="newsletters">Newsletters</a></li>
+        </ul>
+      </nav>
+
+      <form class="search-form" id="searchForm" role="search">
+        <label for="searchInput" class="visually-hidden">Search this site</label>
+        <input type="search" id="searchInput" placeholder="Search the site…" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ SEARCH RESULTS (shown by JS) ============ -->
+    <section class="page" id="search-results" data-title="Search Results" data-searchable="false" hidden>
+      <h1>Search Results</h1>
+      <p id="searchSummary"></p>
+      <ul id="resultsList" class="results-list"></ul>
+    </section>
+
+    <!-- ============ HOME ============ -->
+    <section class="page" id="home" data-title="Home">
+      <div class="hero">
+        <h1>Population Specialty Group</h1>
+        <p class="lead">
+          The AAG’s Population Specialty Group promotes research, teaching, and service in the
+          general field of population geography. Its purpose is to stimulate the exchange of
+          information among members of PSG, encourage the development of population geography
+          as a science and a profession, and develop close relations and interchange with other
+          sciences, especially those dealing with population.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <a class="card" href="#about">
+          <h2>About PSG</h2>
+          <p>Learn about our mission, leadership, and governance.</p>
+        </a>
+        <a class="card" href="#about/board">
+          <h2>Board</h2>
+          <p>Meet the officers and board members who lead the group.</p>
+        </a>
+        <a class="card" href="#newsletters">
+          <h2>Newsletters</h2>
+          <p>Read current and past issues of the PSG newsletter.</p>
+        </a>
+      </div>
+
+      <h2>Announcements</h2>
+      <ul class="announcements">
+        <li><strong>[Date]</strong> — [Announcement, e.g., call for papers for the AAG Annual Meeting.]</li>
+        <li><strong>[Date]</strong> — [Announcement, e.g., student paper competition deadline.]</li>
+      </ul>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="page" id="about" data-title="About" hidden>
+      <h1>About the Population Specialty Group</h1>
+      <p>
+        The Population Specialty Group (PSG) is a specialty group of the American Association of
+        Geographers (AAG). Members study population distribution, migration, fertility, mortality,
+        health, urbanization, and related topics from a geographic perspective.
+      </p>
+      <p>[Add history of the group, membership information, awards, and how to join.]</p>
+
+      <div class="card-grid">
+        <a class="card" href="#about/board">
+          <h2>Board</h2>
+          <p>Current officers and board members.</p>
+        </a>
+        <a class="card" href="#about/bylaws">
+          <h2>Bylaws</h2>
+          <p>The rules governing the Population Specialty Group.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT > BOARD ============ -->
+    <section class="page" id="about/board" data-title="Board" hidden>
+      <p class="breadcrumb"><a href="#about">About</a> › Board</p>
+      <h1>Board</h1>
+      <p>The PSG board for [term years].</p>
+
+      <div class="board-grid">
+        <article class="person">
+          <h2>[Name]</h2>
+          <p class="role">Chair</p>
+          <p>[Institution]</p>
+          <p><a href="mailto:email@example.edu">email@example.edu</a></p>
+        </article>
+        <article class="person">
+          <h2>[Name]</h2>
+          <p class="role">Vice Chair</p>
+          <p>[Institution]</p>
+          <p><a href="mailto:email@example.edu">email@example.edu</a></p>
+        </article>
+        <article class="person">
+          <h2>[Name]</h2>
+          <p class="role">Secretary-Treasurer</p>
+          <p>[Institution]</p>
+          <p><a href="mailto:email@example.edu">email@example.edu</a></p>
+        </article>
+        <article class="person">
+          <h2>[Name]</h2>
+          <p class="role">Newsletter Editor</p>
+          <p>[Institution]</p>
+          <p><a href="mailto:email@example.edu">email@example.edu</a></p>
+        </article>
+        <article class="person">
+          <h2>[Name]</h2>
+          <p class="role">Board Member</p>
+          <p>[Institution]</p>
+          <p><a href="mailto:email@example.edu">email@example.edu</a></p>
+        </article>
+        <article class="person">
+          <h2>[Name]</h2>
+          <p class="role">Student Representative</p>
+          <p>[Institution]</p>
+          <p><a href="mailto:email@example.edu">email@example.edu</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT > BYLAWS ============ -->
+    <section class="page" id="about/bylaws" data-title="Bylaws" hidden>
+      <p class="breadcrumb"><a href="#about">About</a> › Bylaws</p>
+      <h1>Bylaws</h1>
+      <p><em>Last amended: [date]</em></p>
+
+      <article class="bylaw">
+        <h2>Article I — Name</h2>
+        <p>The name of this organization shall be the Population Specialty Group of the American Association of Geographers.</p>
+      </article>
+      <article class="bylaw">
+        <h2>Article II — Purpose</h2>
+        <p>The purpose of the Population Specialty Group is to stimulate the exchange of information among its members, encourage the development of population geography as a science and a profession, and develop close relations and interchange with other sciences, especially those dealing with population.</p>
+      </article>
+      <article class="bylaw">
+        <h2>Article III — Membership</h2>
+        <p>[Membership eligibility and dues text.]</p>
+      </article>
+      <article class="bylaw">
+        <h2>Article IV — Officers and Board</h2>
+        <p>[Officer positions, duties, and terms of office.]</p>
+      </article>
+      <article class="bylaw">
+        <h2>Article V — Elections</h2>
+        <p>[Nomination and election procedures.]</p>
+      </article>
+      <article class="bylaw">
+        <h2>Article VI — Meetings</h2>
+        <p>[Annual business meeting at the AAG Annual Meeting, quorum, etc.]</p>
+      </article>
+      <article class="bylaw">
+        <h2>Article VII — Amendments</h2>
+        <p>[Procedure for amending these bylaws.]</p>
+      </article>
+    </section>
+
+    <!-- ============ NEWSLETTERS ============ -->
+    <section class="page" id="newsletters" data-title="Newsletters" hidden>
+      <h1>Newsletters</h1>
+      <p>The PSG newsletter shares member news, research highlights, job postings, and conference information.</p>
+
+      <h2>2026</h2>
+      <ul class="newsletter-list">
+        <li><a href="newsletters/psg-fall-2026.pdf">Fall 2026</a> — [Brief description of issue contents]</li>
+        <li><a href="newsletters/psg-spring-2026.pdf">Spring 2026</a> — [Brief description of issue contents]</li>
+      </ul>
+
+      <h2>2025</h2>
+      <ul class="newsletter-list">
+        <li><a href="newsletters/psg-fall-2025.pdf">Fall 2025</a> — [Brief description of issue contents]</li>
+        <li><a href="newsletters/psg-spring-2025.pdf">Spring 2025</a> — [Brief description of issue contents]</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Population Specialty Group, American Association of Geographers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
