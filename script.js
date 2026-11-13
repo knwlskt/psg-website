@@ -42,8 +42,8 @@ function showPage(pageId) {
 function setActiveNav(pageId) {
   document.querySelectorAll("[data-nav]").forEach((link) => {
     const key = link.dataset.nav;
-    // Highlight exact match, and the parent "About" for its sub-pages
-    const active = key === pageId || (key === "about" && pageId.startsWith("about/"));
+    // Highlight exact match, and the parent tab (e.g. "About") for its sub-pages
+    const active = key === pageId || pageId.startsWith(key + "/");
     link.classList.toggle("active", active);
     if (key === pageId) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
